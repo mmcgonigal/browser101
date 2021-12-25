@@ -15,12 +15,31 @@
                 font-size: 40px ;
             }
 
+
         </style>
     </head>
     <body>
         <div class="tag">Window Size</div>
-
+        <h1> this is the title.</h1>
+        <p>hello, this is the paragraph.</p>
+        <p id="text">this paragraph has id.</p>
+        <p class="paragraph">this paragraph has class. </p>
         <script>
+            console.log(document.querySelector("h1"))
+            console.log(document.querySelector("p"))
+            console.log(document.querySelector("#text"))
+            console.log(document.querySelector(".paragraph"))
+            console.log(document.getElementById("text"))
+
+            const h1=document.querySelector("h1")
+            const text=document.getElementById("text")
+            console.log(h1);
+            console.log(h1.textContent);
+            h1.textContent = " I can change the content from JS by using textContent"
+            text.textContent =  "this is changed before console log "
+            console.log(text);
+
+
 
         </script>
 
