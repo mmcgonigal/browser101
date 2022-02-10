@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BoundingClientRect</title>
+    <style>
+        body{
+            background-color: black;
+            /*overflow: hidden;
+            this will make screen unable to scroll*/
+        }
+        div{
+            border: solid 1px black;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
+<div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
+<div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
+<div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
+<div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
+<div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
+<div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
+<div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
+<div id="special" style="width:100px; height:100px; background-color: #9575cd" ></div>
+<div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
+<div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
+<div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
+<div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
+
+
+
+
+
+
+
+
+
+<script>
+    const special = document.querySelector('#special');
+    special.addEventListener('click',(event)=>{
+        const rect = special.getBoundingClientRect();
+        console.log(rect)
+        console.log(`client: ${event.clientX}, ${event.clientY}`)
+        console.log(`page: ${event.pageX}, ${event.clientY}`)
+    })
+
+
+
+</script>
+</body>
+</html>
