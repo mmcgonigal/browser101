@@ -32,13 +32,13 @@
 <div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
 <div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
 
+<button id="scroll__by">scroll by 100px(y)</button>
+<button id="scroll__to">scroll to</button>
+<button id="scroll__into"></button>
 
 
-
-
-
-
-
+<!--client coordinate will show the coordinate based on client window.  //화면상 꼭지점 기준,
+but page coordinate will show the coordinates from the top of the page. //페이지 자체 (스크롤 맨 위로 올렸을때  꼭지점 기준, -->
 
 <script>
     const special = document.querySelector('#special');
@@ -47,6 +47,16 @@
         console.log(rect)
         console.log(`client: ${event.clientX}, ${event.clientY}`)
         console.log(`page: ${event.pageX}, ${event.clientY}`)
+    })
+    const by = document.querySelector('#scroll__by');
+    const to = document.querySelector('#scroll__to');
+    const into = document.querySelector('#scroll__into');
+
+    //scroll by 100 px from page .
+    by.addEventListener('click',(event)=>{
+        const by__page =document.getBoundingClientRect()
+
+
     })
 
 
