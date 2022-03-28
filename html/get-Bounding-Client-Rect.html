@@ -33,7 +33,7 @@
 <div class="regular" style="width:100px; height:100px; background-color: #f8bbd0" ></div>
 
 <button id="scroll__by">scroll by 100px(y)</button>
-<button id="scroll__to">scroll to</button>
+<button id="scroll__to">scroll to </button>
 <button id="scroll__into"></button>
 
 
@@ -44,20 +44,30 @@ but page coordinate will show the coordinates from the top of the page. //페이
     const special = document.querySelector('#special');
     special.addEventListener('click',(event)=>{
         const rect = special.getBoundingClientRect();
-        console.log(rect)
-        console.log(`client: ${event.clientX}, ${event.clientY}`)
-        console.log(`page: ${event.pageX}, ${event.clientY}`)
+        console.log(rect);
+        console.log(`client : ${event.clientX},${event.clientY}`)
     })
-    const by = document.querySelector('#scroll__by');
-    const to = document.querySelector('#scroll__to');
-    const into = document.querySelector('#scroll__into');
-
-    //scroll by 100 px from page .
-    by.addEventListener('click',(event)=>{
-        const by__page =document.getBoundingClientRect()
 
 
-    })
+    // const special = document.querySelector('#special');
+    // special.addEventListener('click',(event)=>{
+    //     const rect = special.getBoundingClientRect();
+    //     console.log(rect)
+    //     console.log(`client: ${event.clientX}, ${event.clientY}`)
+    //     console.log(`page: ${event.pageX}, ${event.clientY}`)
+    // })
+    // const by = document.querySelector('#scroll__by');
+    // const to = document.querySelector('#scroll__to');
+    // const into = document.querySelector('#scroll__into');
+    //
+    // //scroll by 100 px from page .
+    // by.addEventListener('click',(event)=>{
+    //     const by__page =document.getBoundingClientRect()
+    //
+
+    // })
+
+
 
 
 
