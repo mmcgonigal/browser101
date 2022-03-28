@@ -1,22 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>window size</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <style>
         .tag{
-            display: inline-block;
             background-color: thistle;
+            display: inline-block;
             padding: 16px;
-            margin-top: 16px;
+            margin-top : 16px;
             font-size: 48px;
         }
     </style>
 </head>
 <body>
-<div class="tag">
-  Window Size
-</div>
+<div class="tag">window size</div>
+</body>
+</html>
 
 <script>
    //  //window size.
@@ -48,6 +51,17 @@
    //1 .어떤 태그를 쓸껀가?
    //2.이벤트는 무슨일 ? . 이벤트 리스터는 무슨 일 ?
    //3.
+   const tag = document.querySelector('.tag');
+
+   window.addEventListener('resize',function(){
+       tag.innerHTML = `
+       window.screen: ${window.screen.width},${window.screen.height} <br>
+       window.outer: ${window.outerWidth},${window.outerHeight} <br>
+      window.innerWidth: ${window.innerWidth},${window.innerHeight}<br>
+      window.screen: ${window.screen.width},${window.screen.height}<br>
+
+   `})
+
 
 </script>
 </body>
