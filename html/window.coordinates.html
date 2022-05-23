@@ -59,13 +59,19 @@
     })
 
 
-    const scrollBy = document.querySelector(`.scrollBy`)
-    const scrollTo = document.querySelector(`.scrollTo`)
-    const scrollInto = document.querySelector(`.scrollInto`)
+    const scrollBy = document.querySelector(`.scroll-By`)
+    const scrollTo = document.querySelector(`.scroll-To`)
+    const scrollInto = document.querySelector(`.scroll-into`)
 
-    scrollBy.addEventListener('click',()=>{})
-    scrollTo.addEventListener('click',()=>{})
-    scrollInto.addEventListener('click',()=>{})
+    scrollBy.addEventListener('click',()=>{
+        window.scrollBy({left:0, top:100});
+    })
+    scrollTo.addEventListener('click',()=>{
+        window.scrollTo({left:0,top:100});
+    })
+    scrollInto.addEventListener('click',()=>{
+        window.scrollIntoView()
+    })
 
 </script>
 </body>
