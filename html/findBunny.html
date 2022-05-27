@@ -9,7 +9,25 @@
     <style>
         body {
             background-color:black;
+            text-align:center;
+
         }
+        img{
+            display: block;
+            margin: auto;
+
+        }
+        button{
+         outline: none;
+            background-color: tomato;
+            color: white;
+            font-size: 32px;
+            margin: 16px 0px;
+            cursor: pointer;
+
+        }
+
+
     </style>
 </head>
 <body>
@@ -20,9 +38,21 @@
 <img src="/asset/carrot.png" alt="carrot" />
 <img src="/asset/carrot.png" alt="carrot" />
 <img src="/asset/carrot.png" alt="carrot" />
-<img src="/asset/rabbit.png" alt="carrot" />
+<img id="bunny" src="/asset/rabbit.png" alt="rabbit" />
 <img src="/asset/carrot.png" alt="carrot" />
 <img src="/asset/carrot.png" alt="carrot" />
 <img src="/asset/carrot.png" alt="carrot" />
+
+
+
+<script>
+    let bunny = document.querySelector("#bunny");
+    let button = document.querySelector("button")
+
+    button.addEventListener('click',()=>{
+        bunny.scrollIntoView({behavior:"smooth"});
+    })
+
+</script>
 </body>
 </html>
