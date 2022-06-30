@@ -10,11 +10,26 @@ function onAdd(){
     console.log(text);
     //create new item
     const item = createItem();
-    //add new item in intems container
+    //add new item in items container
     items.appendChild(item);
     // reset input
     input.value='';
     input.focus()
+}
+
+function createItem(text){
+    const itemRow= document.createElement('li')
+    itemRow.setAttribute("class","item_row");
+
+    const item= document.createElement('div')
+    itemRow.setAttribute("class","item");
+
+    const span = document.createElement("span");
+    span.setAttribute("class","item_name");
+    span.innerText = text
+
+    const itemDivider = document.createElement('div')
+    itemDivider.setAttribute("class","item_divider")
 }
 
 addBtn.addEventListener("click",()=>{
