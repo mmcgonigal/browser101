@@ -7,6 +7,10 @@ const addBtn =  document.querySelector(".footer_button");
 function onAdd(){
     //take input from user
     const text = input.value;
+    if (text ===""){
+        input.focus();
+        return;
+    }
     console.log(text);
     //create new item
     const item = createItem();
@@ -22,11 +26,11 @@ function createItem(text){
     itemRow.setAttribute("class","item_row");
 
     const item= document.createElement('div')
-    itemRow.setAttribute("class","item");
+    item.setAttribute("class","item");
 
-    const span = document.createElement("span");
-    span.setAttribute("class","item_name");
-    span.innerText = text
+    const name = document.createElement("span");
+    name.setAttribute("class","item_name");
+    name.innerText = text
 
     const deleteBtn = document.createElement("button");
     deleteBtn.setAttribute("class","item_delete");
@@ -49,4 +53,7 @@ function createItem(text){
 
 addBtn.addEventListener("click",()=>{
     onAdd();
+})
+input.addEventListener("keypress",(event)=>{
+    console.log("key")
 })
