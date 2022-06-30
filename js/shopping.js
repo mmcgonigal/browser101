@@ -9,8 +9,12 @@ function onAdd(){
     const text = input.value;
     console.log(text);
     //create new item
+    const item = createItem();
     //add new item in intems container
+    items.appendChild(item);
     // reset input
+    input.value='';
+    input.focus()
 }
 
 addBtn.addEventListener("click",()=>{
