@@ -60,4 +60,8 @@ function printSomething(){
 function printSomething1(a, b){
     console.log(`print this ${a}, and ${b}`)
 }
-printSomething1(100,1111)
+printSomething1(100,1111);
+
+function surprise(operator){
+    const result = operator
+}
