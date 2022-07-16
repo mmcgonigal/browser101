@@ -65,3 +65,12 @@ printSomething1(100,1111);
 function surprise(operator){
     const result = operator
 }
+
+//TODO Write a function named calculateTax that takes in two inputs representing the totalPaid and the taxPercent. If both inputs are numeric or numeric strings, calculateTax should return the total with tax added in a string looking like: “$XX.XX”. If either or both inputs are not numeric or numeric strings, calculateTax should return false.
+
+function calculateTax(a, b) {
+   return `"$${a + a*(b/100)}"`
+}
+
+console.log(calculateTax(25, 8));
+calculateTax([1,2,3],10)
