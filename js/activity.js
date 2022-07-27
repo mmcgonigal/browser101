@@ -6,14 +6,18 @@ function solution(a, b, k) {
     b.reverse();
     let arr = [];
     let tiny;
-    for(let i = 0; i <a.length; i++){
-        let stringA= a[i].toString()
-        for(let j = 0 ; j <b.length; j++){
-            let stringB = b[i].toString()
-            arr.push(a[i].concat(b[i]));
+    let stringA;
+    let stringB;
+    for(let i = 0; i <a.length; i++) {
+        stringA = a[i].toString()
+
+        for (let j = 0; j < b.length; j++) {
+            stringB = b[j].toString()
         }
-        return arr;
+        arr.push(stringA[i].concat(stringB[i]));
+        console.log(arr)
     }
+
 
     for(let m = 0; m <arr.length; m++){
         if(arr[m]<k) {
